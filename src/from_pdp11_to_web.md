@@ -42,4 +42,12 @@ It can handle a large system like troff because with the pipeline, each module o
 
 ## Read–Eval–Print Loop (REPL) and Client/Server
 
-In principle we can start a computer, process the data, get the output and then shut it down. This is a batch processing mode. The next level of human interactivity is [Read–Eval–Print Loop (REPL)](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) in which the computer return to waiting for user input after the job is done. In UNIX, interactive shells and editors are working in this way. REPL is a [request-response pattern](https://en.wikipedia.org/wiki/Request%E2%80%93response), the same as in the [client-server model](https://en.wikipedia.org/wiki/Client%E2%80%93server_model). With light weight message data, REPL and request-response use little resources when waiting for user/client input. That is the reason that they can run in UNIX systems with limited resouces. 
+In principle we can start a computer, process the data, get the output and then shut it down. This is a batch processing mode. The next level of human interactivity is Read–Eval–Print Loop (REPL) in which the computer returns to waiting for user input after the job is done. In UNIX, interactive shells and editors are working in this way. REPL is a request-response pattern that works the same as in the client-server model. With light weight message data, REPL and request-response use little resources when waiting for user/client input. That is the reason that they can run in UNIX systems with limited resouces. 
+
+## Graphical User Interface (GUI) and state management
+
+The next break through in human computer interface is the invention of Graphical User Interface (GUI). GUI requires more resources to run and more complicated state management for control. Model–View–Controller (MVC) and Object-Oriented-Programming (OOP) are invented to fit this need. Traditional desktop operating systems like Microsoft Windows and Mac OS X as well as the **What You See Is What You Get (WYSIWYG)** applications built on top of them need more resources to run.
+
+Modern web browsers are the most sophisticated general purpose GUI applications that runs on desktop computers as well as mobile devices. It runs both the client-server pattern for data I/O and Object Oriented Programming for state management and user interaction. With JavaScript and HTML/CSS render engines, programmer use [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API) to implement rich user interface.
+
+[mdBook](https://rust-lang.github.io/mdBook/index.html) is a command line tool that generate rich web pages, a 50 year journey from [troff](https://www.troff.org/).
