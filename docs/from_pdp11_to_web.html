@@ -206,6 +206,8 @@ This is a simple Troff document.
 <p>4,096 words or read/write memory</p>
 </blockquote>
 <p>It can handle a large system like troff because with the pipeline, each module only consume small amount of memory before the task is passed to the next one. There is no much memory used to run system that does nothing but waiting for user interaction. UNIX pipelines have no loops.</p>
+<h2 id="readevalprint-loop-repl-and-clientserver"><a class="header" href="#readevalprint-loop-repl-and-clientserver">Read–Eval–Print Loop (REPL) and Client/Server</a></h2>
+<p>In principle we can start a computer, process the data, get the output and then shut it down. This is a batch processing mode. The next level of human interactivity is <a href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop">Read–Eval–Print Loop (REPL)</a> in which the computer return to waiting for user input after the job is done. In UNIX, interactive shells and editors are working in this way. REPL is a <a href="https://en.wikipedia.org/wiki/Request%E2%80%93response">request-response pattern</a>, the same as in the <a href="https://en.wikipedia.org/wiki/Client%E2%80%93server_model">client-server model</a>. With light weight message data, REPL and request-response use little resources when waiting for user/client input. That is the reason that they can run in UNIX systems with limited resouces. </p>
 
                     </main>
 

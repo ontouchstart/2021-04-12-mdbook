@@ -40,5 +40,6 @@ This read/write pattern is also very resource efficient. A single human being ca
 
 It can handle a large system like troff because with the pipeline, each module only consume small amount of memory before the task is passed to the next one. There is no much memory used to run system that does nothing but waiting for user interaction. UNIX pipelines have no loops.   
 
+## Read–Eval–Print Loop (REPL) and Client/Server
 
-
+In principle we can start a computer, process the data, get the output and then shut it down. This is a batch processing mode. The next level of human interactivity is [Read–Eval–Print Loop (REPL)](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) in which the computer return to waiting for user input after the job is done. In UNIX, interactive shells and editors are working in this way. REPL is a [request-response pattern](https://en.wikipedia.org/wiki/Request%E2%80%93response), the same as in the [client-server model](https://en.wikipedia.org/wiki/Client%E2%80%93server_model). With light weight message data, REPL and request-response use little resources when waiting for user/client input. That is the reason that they can run in UNIX systems with limited resouces. 
