@@ -7,6 +7,8 @@ Troff was originated in the UNIX system running on PDP-11 computers. PDP stands 
 
 **Data Processor** is a name for an era of computers designed for data processing instead of human communication. However, the word **Program** brings humans into the system. UNIX is an opertating system written by programmers for programmers first, data processing the second. Universal computing and flexibility of programming makes human-centric computing more powerful than data-centric data processing. 
 
+On the other hand, the inventors of UNIX designed a beautiful data-centric workflow to mangage human activities efficiently with limited computing resources such as CPU, memory and storage.
+
 Similar to the PDP-11 hardware systems that
 > can handle a wide variety of real-time control applications -- each system being individually tailored from a comprehensive array of modular building blocks.
 
