@@ -3,9 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>From troff to mdBook</title>
-        
-        <meta name="robots" content="noindex" />
+        <title>From PDP-11 to the Web - From troff to mdBook</title>
         
         
 
@@ -100,7 +98,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded "><a href="from_pdp11_to_web.html"><strong aria-hidden="true">1.</strong> From PDP-11 to the Web</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded "><a href="from_pdp11_to_web.html" class="active"><strong aria-hidden="true">1.</strong> From PDP-11 to the Web</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -172,35 +170,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
-<p><a href="https://www.troff.org/">Troff</a> is a <a href="https://www.troff.org/prog.html">system of programs</a> that process a textual description of a document to produce typeset versions suitable for printing. It's more `What you describe is what you get' rather than WYSIWYG.</p>
-<p><a href="https://rust-lang.github.io/mdBook/index.html">mdBook</a> is a command line tool and Rust crate to create books using Markdown files. </p>
-<p><a href="https://commonmark.org/">Markdown</a> is a plain text format for writing structured documents, based on formatting conventions from email and usenet.
-Here is the latest CommonMark specification of Markdown is <a href="https://spec.commonmark.org/0.29">Version 0.29 (2019-04-06)</a>.</p>
-<h2 id="troff-in-docker"><a class="header" href="#troff-in-docker">Troff in docker</a></h2>
-<p>The <code>Dockerfile</code> for troff (with modern <a href="https://www.gnu.org/software/groff/">groff</a> implementation) is</p>
-<pre><code>FROM debian:stable
-RUN apt-get update -qy
-RUN apt-get install -qy groff
-RUN sed -i 's/papersize a4/papersize letter/' /usr/share/groff/current/font/devpdf/DESC # set groff papersize to letter
-RUN dpkg -l
-</code></pre>
-<p>which generates an docker image of 372MB.</p>
-<pre><code>$ docker images
-REPOSITORY                 TAG       IMAGE ID       CREATED          SIZE
-2021-04-12-mdbook_troff    latest    968b745e5c00   4 minutes ago    372MB
-</code></pre>
-<h2 id="mdbook-in-docker"><a class="header" href="#mdbook-in-docker">mdBook in docker</a></h2>
-<p>The <code>Dockerfile</code> for mdBook has only two lines</p>
-<pre><code>FROM rust:latest
-RUN cargo install mdbook
-</code></pre>
-<p>which generates a docker image of 1.45GB, 5 times larger than the troff.</p>
-<pre><code>$ docker images   
-REPOSITORY                 TAG       IMAGE ID       CREATED             SIZE
-2021-04-12-mdbook_mdbook   latest    d30a7ca05fc7   About an hour ago   1.45GB
-</code></pre>
-<h1 id="from-pdp-11-to-the-web"><a class="header" href="#from-pdp-11-to-the-web">From PDP-11 to the Web</a></h1>
+                        <h1 id="from-pdp-11-to-the-web"><a class="header" href="#from-pdp-11-to-the-web">From PDP-11 to the Web</a></h1>
 <p>Troff was originated in the UNIX system running on PDP-11 computers. PDP stands form <strong>Programmed Data Processor</strong>. According to PDP11 Handbook,</p>
 <blockquote>
 <p>PDP-11 is Digital's answer to the demand for a modular system for real-time data acquisition, analysis and control.</p>
@@ -217,6 +187,10 @@ REPOSITORY                 TAG       IMAGE ID       CREATED             SIZE
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
+                            <a rel="prev" href="introduction.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
 
                         
 
@@ -226,6 +200,10 @@ REPOSITORY                 TAG       IMAGE ID       CREATED             SIZE
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="introduction.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
                 
 
                 
@@ -260,16 +238,6 @@ REPOSITORY                 TAG       IMAGE ID       CREATED             SIZE
         <!-- Custom JS scripts -->
         
 
-        
-        
-        <script type="text/javascript">
-        window.addEventListener('load', function() {
-            MathJax.Hub.Register.StartupHook('End', function() {
-                window.setTimeout(window.print, 100);
-            });
-        });
-        </script>
-        
         
 
     </body>
