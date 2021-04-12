@@ -4,3 +4,7 @@ language = "en"
 multilingual = false
 title = "From troff to mdBook"
 src = "src"
+
+[output.html]
+mathjax-support = true
+git-repository-url = "https://github.com/ontouchstart/2021-04-12-mdbook"
