@@ -8,4 +8,6 @@ Troff was originated in the UNIX system running on PDP-11 computers. PDP stands 
 Similar to the PDP-11 hardware systems that
 > can handle a wide variety of real-time control applications -- each system being individually tailored from a comprehensive array of modular building blocks.
 
-Troff is also a modular system that can handle a wide variety of programming tasks from a comprehensive array of software building blocks. The essence of UNIX philosophy is small programs doing specialized data processing jobs with synchronized data pipes. A troff pipeline takes text files written with pre-defined commands, macros, and contents as input, filtered with sequence of compilers that transform data from stages to stages. The final output would be the data that drive terminals, printers or typesetters.  
+Troff is also a modular system that can handle a wide variety of programming tasks from a comprehensive array of software building blocks. The essence of UNIX philosophy is small programs doing specialized data processing jobs with synchronized data pipes. A troff pipeline takes text files written with pre-defined commands, macros, and contents as input, filtered with sequence of compilers that transform data from stages to stages. The final output would be the data that drive terminals, printers or typesetters. 
+
+
