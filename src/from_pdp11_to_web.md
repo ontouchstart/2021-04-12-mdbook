@@ -10,4 +10,23 @@ Similar to the PDP-11 hardware systems that
 
 Troff is also a modular system that can handle a wide variety of programming tasks from a comprehensive array of software building blocks. The essence of UNIX philosophy is small programs doing specialized data processing jobs with synchronized data pipes. A troff pipeline takes text files written with pre-defined commands, macros, and contents as input, filtered with sequence of compilers that transform data from stages to stages. The final output would be the data that drive terminals, printers or typesetters. 
 
+In the modern groff based system, the output can be PDF files instead of hardcopy output from the typestters.
+
+Here is an example
+```
+{{ #include hello_troff/hello }}
+```
+
+This command will generate the [PDF output](hello_troff/hello.pdf)
+```
+groff -Tpdf -ms hello > hello.pdf
+```
+
+We can put it in a `Makefile`
+```
+{{ #include hello_troff/Makefile}}
+```
+
+This Makefile-driven pipeline of generating output files from input files is a typical UNIX workflow.
+
 

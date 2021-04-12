@@ -211,6 +211,23 @@ REPOSITORY                 TAG       IMAGE ID       CREATED             SIZE
 <p>can handle a wide variety of real-time control applications -- each system being individually tailored from a comprehensive array of modular building blocks.</p>
 </blockquote>
 <p>Troff is also a modular system that can handle a wide variety of programming tasks from a comprehensive array of software building blocks. The essence of UNIX philosophy is small programs doing specialized data processing jobs with synchronized data pipes. A troff pipeline takes text files written with pre-defined commands, macros, and contents as input, filtered with sequence of compilers that transform data from stages to stages. The final output would be the data that drive terminals, printers or typesetters. </p>
+<p>In the modern groff based system, the output can be PDF files instead of hardcopy output from the typestters.</p>
+<p>Here is an example</p>
+<pre><code>.TL
+Hello Troff
+.AU
+Sam Liu
+.PP
+This is a simple Troff document.
+</code></pre>
+<p>This command will generate the <a href="hello_troff/hello.pdf">PDF output</a></p>
+<pre><code>groff -Tpdf -ms hello &gt; hello.pdf
+</code></pre>
+<p>We can put it in a <code>Makefile</code></p>
+<pre><code>hello.pdf: hello
+	groff -Tpdf -ms hello &gt; hello.pdf
+</code></pre>
+<p>This Makefile-driven pipeline of generating output files from input files is a typical UNIX workflow.</p>
 
                     </main>
 
