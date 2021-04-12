@@ -181,14 +181,14 @@ Here is the latest CommonMark specification of Markdown is <a href="https://spec
 <p>The <code>Dockerfile</code> for troff (with modern <a href="https://www.gnu.org/software/groff/">groff</a> implementation) is</p>
 <pre><code>FROM debian:stable
 RUN apt-get update -qy
-RUN apt-get install -qy groff
+RUN apt-get install -qy make groff
 RUN sed -i 's/papersize a4/papersize letter/' /usr/share/groff/current/font/devpdf/DESC # set groff papersize to letter
 RUN dpkg -l
 </code></pre>
-<p>which generates an docker image of 372MB.</p>
+<p>which generates an docker image of 374MB.</p>
 <pre><code>$ docker images
 REPOSITORY                 TAG       IMAGE ID       CREATED          SIZE
-2021-04-12-mdbook_troff    latest    968b745e5c00   4 minutes ago    372MB
+2021-04-12-mdbook_troff    latest    e207ce03cafb   13 seconds ago   374MB
 </code></pre>
 <h2 id="mdbook-in-docker"><a class="header" href="#mdbook-in-docker">mdBook in docker</a></h2>
 <p>The <code>Dockerfile</code> for mdBook has only two lines</p>

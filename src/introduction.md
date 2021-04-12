@@ -13,15 +13,15 @@ The `Dockerfile` for troff (with modern [groff](https://www.gnu.org/software/gro
 ```
 FROM debian:stable
 RUN apt-get update -qy
-RUN apt-get install -qy groff
+RUN apt-get install -qy make groff
 RUN sed -i 's/papersize a4/papersize letter/' /usr/share/groff/current/font/devpdf/DESC # set groff papersize to letter
 RUN dpkg -l
 ```
-which generates an docker image of 372MB.
+which generates an docker image of 374MB.
 ```
 $ docker images
 REPOSITORY                 TAG       IMAGE ID       CREATED          SIZE
-2021-04-12-mdbook_troff    latest    968b745e5c00   4 minutes ago    372MB
+2021-04-12-mdbook_troff    latest    e207ce03cafb   13 seconds ago   374MB
 ```
 
 ## mdBook in docker
