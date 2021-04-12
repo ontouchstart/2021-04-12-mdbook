@@ -168,6 +168,29 @@
 <p><a href="https://rust-lang.github.io/mdBook/index.html">mdBook</a> is a command line tool and Rust crate to create books using Markdown files. </p>
 <p><a href="https://commonmark.org/">Markdown</a> is a plain text format for writing structured documents, based on formatting conventions from email and usenet.
 Here is the latest CommonMark specification of Markdown is <a href="https://spec.commonmark.org/0.29">Version 0.29 (2019-04-06)</a>.</p>
+<h2 id="troff-in-docker"><a class="header" href="#troff-in-docker">Troff in docker</a></h2>
+<p>The <code>Dockerfile</code> for troff (with modern <a href="https://www.gnu.org/software/groff/">groff</a> implementation) is</p>
+<pre><code>FROM debian:stable
+RUN apt-get update -qy
+RUN apt-get install -qy groff
+RUN sed -i 's/papersize a4/papersize letter/' /usr/share/groff/current/font/devpdf/DESC # set groff papersize to letter
+RUN dpkg -l
+</code></pre>
+<p>which generates an docker image of 372MB.</p>
+<pre><code>$ docker images
+REPOSITORY                 TAG       IMAGE ID       CREATED          SIZE
+2021-04-12-mdbook_troff    latest    968b745e5c00   4 minutes ago    372MB
+</code></pre>
+<h2 id="mdbook-in-docker"><a class="header" href="#mdbook-in-docker">mdBook in docker</a></h2>
+<p>The <code>Dockerfile</code> for mdBook has only two lines</p>
+<pre><code>FROM rust:latest
+RUN cargo install mdbook
+</code></pre>
+<p>which generates a docker image of 1.45GB, 5 times larger than the troff.</p>
+<pre><code>$ docker images   
+REPOSITORY                 TAG       IMAGE ID       CREATED             SIZE
+2021-04-12-mdbook_mdbook   latest    d30a7ca05fc7   About an hour ago   1.45GB
+</code></pre>
 
                     </main>
 

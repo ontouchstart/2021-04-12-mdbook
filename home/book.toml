@@ -1,5 +1,5 @@
 [book]
-authors = []
+authors = ["Sam Liu"]
 language = "en"
 multilingual = false
 title = "From troff to mdBook"

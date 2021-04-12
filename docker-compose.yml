@@ -1,6 +1,6 @@
 services:
 
-  book:
+  mdbook:
     command: mdbook watch
     build: .
     volumes:
@@ -9,3 +9,10 @@ services:
       - ./docs/:/home/book
     working_dir: /home
 
+  troff:
+    command: bash
+    build: ./troff
+    volumes:
+      - ./home/:/home
+      - ./src/:/home/src
+    working_dir: /home
