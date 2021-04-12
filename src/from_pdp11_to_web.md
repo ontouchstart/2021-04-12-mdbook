@@ -50,4 +50,4 @@ The next break through in human computer interface is the invention of Graphical
 
 Modern web browsers are the most sophisticated general purpose GUI applications that runs on desktop computers as well as mobile devices. It runs both the client-server pattern for data I/O and Object Oriented Programming for state management and user interaction. With JavaScript and HTML/CSS render engines, programmer use [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API) to implement rich user interface.
 
-[mdBook](https://rust-lang.github.io/mdBook/index.html) is a command line tool that generate rich web pages, a 50 year journey from [troff](https://www.troff.org/).
+[mdBook](https://rust-lang.github.io/mdBook/index.html) is a command line tool that generates rich web pages, a 50 year journey from [troff](https://www.troff.org/).
