@@ -1,0 +1,11 @@
+services:
+
+  book:
+    command: mdbook watch
+    build: .
+    volumes:
+      - ./home/:/home
+      - ./src/:/home/src
+      - ./docs/:/home/book
+    working_dir: /home
+
