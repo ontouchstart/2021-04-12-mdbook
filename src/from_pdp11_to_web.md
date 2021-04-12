@@ -1,5 +1,7 @@
 # From PDP-11 to the Web
 
+## Data Processing
+
 Troff was originated in the UNIX system running on PDP-11 computers. PDP stands form **Programmed Data Processor**. According to PDP11 Handbook,
 > PDP-11 is Digital's answer to the demand for a modular system for real-time data acquisition, analysis and control.
 
@@ -27,6 +29,14 @@ We can put it in a `Makefile`
 {{ #include hello_troff/Makefile}}
 ```
 
-This Makefile-driven pipeline of generating output files from input files is a typical UNIX workflow.
+This *make-driven* pipeline of generating output files from input files is a typical UNIX workflow. And we can say UNIX is a maker's computing system. With modern software terminonlogy, we usually call it *build system*. 
+
+From human interactivity standpoint, this is a *reader/writer* creative pattern that plays a big role in the history of civilization. In this pattern, reading is *input*, writing is *output*. Depends on which side of the pipe `|`, the same data can be input or output. We write something so that it can be read; we read so that we can have something to write about.
+
+This read/write pattern is also very resource efficient. A single human being can write text that can be read by millions of people. And a person can read very efficiently with enough education and concentration. On the machine side, the original basic PDP-11/20 has
+> 4,096 words or read/write memory
+
+It can handle a large system like troff because with the pipeline, each module only consume small amount of memory before the task is passed to the next one. There is no much memory used to run system that does nothing but waiting for user interaction. UNIX pipelines have no loops.   
+
 
 
